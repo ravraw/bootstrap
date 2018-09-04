@@ -13,8 +13,8 @@
   <title>Bootstrap boiler</title>
 </head>
 
-<body>
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+<body data-spy="scroll" data-target="#main-nav" id="home">
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" id="main-nav">
     <div class="container">
       <a href="#index.html" class="navbar-brand">LoopLAB</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
@@ -114,21 +114,21 @@
   <!-- HOME SECTION ENDS  -->
 
   <!--EXPLORE HEAD  -->
-  <section id="explore-head-section">
+  <section id="explore-head-section" class="bg-warning pt-3">
     <div class="container">
       <div class="row">
-        <div class="col text-center py-4">
+        <div class="col text-center py-5">
           <h1 class="display-4">Explore</h1>
           <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem velit nisi, sit quos est, totam eos soluta
           </p>
-          <a href="" class="btn btn-outline-secondary">Find Out More</a>
+          <a href="" class="btn btn-outline-light">Find Out More</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- EXPLORE SECTION -->
-  <section id="explore-section" class="bg-light py-5">
+  <section id="explore-section" class="bg-light text-muted py-5">
     <div class="container">
       <div class="row d-flex align-items-center justify-content-center">
         <div class="col-lg-6">
@@ -159,30 +159,183 @@
     </div>
   </section>
 
+  <!--CREATE HEAD  -->
+  <section id="create-head-section" class="bg-primary pt-3">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center py-5">
+          <h1 class="display-4">Create</h1>
+          <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem velit nisi, sit quos est, totam eos soluta
+          </p>
+          <a href="" class="btn btn-outline-light">Find Out More</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- CREATE SECTION -->
+  <section id="create-section" class=" py-5">
+    <div class="container">
+      <div class="row d-flex  align-items-center justify-content-center">
+        <div class="col-lg-6 order-2 ">
+          <img src="./img/create.jpg" alt="" class="img-fluid mt-5 rounded-circle">
+        </div>
+        <div class="col-lg-6 order-1 ">
+          <h3>Create Your Passion</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis fugit error quisquam atque minima iusto!</p>
+          <!-- check box 1 -->
+          <div class="d-flex">
+            <div class="align-self-start p-4">
+              <i class="fas fa-check fa-2x"></i>
+            </div>
+            <div class="align-self-end p-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi perspiciatis omnis vel eligendi! Labore, sunt!
+            </div>
+          </div>
+          <!-- check box 2 -->
+          <div class="d-flex">
+            <div class="align-self-start p-4">
+              <i class="fas fa-check fa-2x"></i>
+            </div>
+            <div class="align-self-end p-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi perspiciatis omnis vel eligendi! Labore, sunt!
+            </div>
+          </div>
 
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!--SHARE HEAD  -->
+  <section id="share-head-section" class="bg-success pt-3">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center py-5">
+          <h1 class="display-4">Share</h1>
+          <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem velit nisi, sit quos est, totam eos soluta
+          </p>
+          <a href="" class="btn btn-outline-light">Find Out More</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- SHARE SECTION -->
+  <section id="share-section" class="bg-light text-muted py-5">
+    <div class="container">
+      <div class="row d-flex align-items-center justify-content-center">
+        <div class="col-lg-6">
+          <img src="./img/share.jpg" alt="Photo by Tim Marshall on Unsplash" class="img-fluid mb-5 rounded-circle">
+        </div>
+        <div class="col-lg-6">
+          <h3>Share Your Creation </h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis fugit error quisquam atque minima iusto!</p>
+          <!-- check box 1 -->
+          <div class="d-flex">
+            <div class="align-self-start p-4">
+              <i class="fas fa-check fa-2x"></i>
+            </div>
+            <div class="align-self-end p-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi perspiciatis omnis vel eligendi! Labore, sunt!
+            </div>
+          </div>
+          <!-- check box 2 -->
+          <div class="d-flex">
+            <div class="align-self-start p-4">
+              <i class="fas fa-check fa-2x"></i>
+            </div>
+            <div class="align-self-end p-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi perspiciatis omnis vel eligendi! Labore, sunt!
+            </div>
+          </div>
 
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- FOOTER  -->
 
+  <footer id="main-footer" class="bg-dark">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center py-4 ">
+          <p>LoopLab - copyright &copy;
+            <span id='year'></span>
+          </p>
+          <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#contactModal">Contact Us</button>
+        </div>
+      </div>
+    </div>
+  </footer>
 
+  <!-- CONTACT MODAL -->
+  <div class="modal fade text-dark" id="contactModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Contact Us</h5>
+          <button class="close" data-dismiss="modal">
+            <span>&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="name">Email</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="name">Message</label>
+              <textarea class="form-control"> </textarea>
+            </div>
 
+          </form>
+          <div class="modal-footer">
+            <button class="btn btn-outline-primary btn-block">Send</button>
+          </div>
 
+        </div>
+      </div>
+    </div>
+  </div>
 
-
-
-
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js " integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin=" anonymous "></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q "
+    crossorigin="anonymous "></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl "
+    crossorigin="anonymous "></script>
 
   <script>
     // get current year for copyright
     $('#year').text(new Date().getFullYear());
+
+    // init scrollspy
+    $('body').scrollspy({
+      target: '#main-nav'
+    });
+
+    // Add smooth scrolling
+    $('#main-nav a').on('click', function (e) {
+      // Check for a hash value
+      if (this.hash !== '') {
+        // Prevent default behavior
+        e.preventDefault();
+
+        // Store hash
+        const hash = this.hash;
+
+        // Animate smooth scroll
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 900, function () {
+          // Add hash to URL after scroll
+          window.location.hash = hash;
+        });
+      }
+    });
 
   </script>
 </body>

@@ -27,24 +27,21 @@ body {
 }
 
 #home-section .home-inner {
-  padding-top: 100px;
+  padding-top: 150px;
 }
 
 #home-section .card-form {
   opacity: 0.8;
 }
 
-#home-section .fas {
+#home-section .fas,
+#create-section .fas {
   background: #fff;
   color: #008ed6;
   padding: 5px;
   border-radius: 5px;
 }
 
-#explore-section {
-  color: #333;
-  /* height: 70vh; */
-}
 #explore-section .fas,
 #share-section .fas {
   background: #333;

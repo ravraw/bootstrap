@@ -1,0 +1,18 @@
+$primary: #e74c3c;
+$primary-overlay: rgba(231, 77, 60, 0.8);
+
+body {
+  margin-top: 100px;
+  font-size: 62.5%;
+}
+
+.navbar {
+  box-shadow: 1px 2px 3px $primary;
+  opacity: 0.9;
+  background: #fff;
+
+  .nav-item {
+    font-size: 2em;
+    padding-right: 1em;
+  }
+}

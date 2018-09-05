@@ -31,6 +31,27 @@ body {
   }
 }
 
+.info-header {
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+#users {
+  .fab {
+    font-size: 2em;
+  }
+  img {
+    margin-top: -75px;
+  }
+  .card:hover {
+    background: $primary;
+    color: #fff;
+    .fab {
+      color: #fff;
+    }
+  }
+}
+
 @media (max-width: 991.98px) {
   #showcase {
     height: 50vh;

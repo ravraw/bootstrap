@@ -20,6 +20,20 @@ body {
   #showcase img {
     height: 75vh; }
 
+.info-header {
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333; }
+
+#users .fab {
+  font-size: 2em; }
+#users img {
+  margin-top: -75px; }
+#users .card:hover {
+  background: #e74c3c;
+  color: #fff; }
+  #users .card:hover .fab {
+    color: #fff; }
+
 @media (max-width: 991.98px) {
   #showcase {
     height: 50vh;

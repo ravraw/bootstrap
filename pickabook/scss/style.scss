@@ -1,5 +1,5 @@
 $primary: #e74c3c;
-$primary-overlay: rgba(231, 77, 60, 0.8);
+$primary-overlay: #e74d3ccc;
 
 body {
   margin-top: 100px;
@@ -14,5 +14,33 @@ body {
   .nav-item {
     font-size: 2em;
     padding-right: 1em;
+  }
+}
+
+#showcase {
+  position: relative;
+  min-height: 80vh;
+  border: 1px solid red;
+
+  .primary-overlay {
+    background: $primary-overlay;
+    height: 60vh;
+  }
+  img {
+    height: 75vh;
+  }
+}
+
+@media (max-width: 991.98px) {
+  #showcase {
+    height: 50vh;
+    overflow: hidden;
+    h1 {
+      font-size: 4em;
+    }
+    img {
+      width: auto;
+      margin: 0 auto;
+    }
   }
 }

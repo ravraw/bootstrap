@@ -12,9 +12,9 @@
   <title>Bootstrap boiler</title>
 </head>
 
-<body>
+<body id="home" data-spy="scroll" data-target="#main-nav">
   <!-- start here -->
-  <nav class="navbar navbar-expand-md navbar-light fixed-top py-2 ">
+  <nav id="main-nav" class="navbar navbar-expand-md navbar-light fixed-top py-2 ">
     <div class="container ">
       <a href="#home" class="navbar-brand">
         <img src="./img/logo2.png" height="70px" alt="pickabook-logo">
@@ -210,7 +210,7 @@
 
   <section id="users" class="my-5 text-center">
     <div class="container">
-      <div class="row">
+      <div class="row mb-5">
         <div class="col">
           <div class="info-header py-5">
             <h1 class="text-primary pb-3">
@@ -226,7 +226,7 @@
       <div class="container">
         <div class="row">
 
-          <div class="col-lg-3 col-md-6 py-3">
+          <div class="col-lg-3 col-md-6 mb-5 py-3">
             <div class="card ">
               <div class="card-body">
                 <img src="img/person1.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
@@ -258,7 +258,7 @@
           </div>
 
 
-          <div class="col-lg-3 col-md-6 py-3">
+          <div class="col-lg-3 col-md-6 mb-5 py-3">
             <div class="card ">
               <div class="card-body">
                 <img src="img/person2.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
@@ -289,7 +289,7 @@
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6 py-3">
+          <div class="col-lg-3 col-md-6 mb-5 py-3">
             <div class="card ">
               <div class="card-body">
                 <img src="img/person3.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
@@ -321,7 +321,7 @@
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6 py-3">
+          <div class="col-lg-3 col-md-6 mb-5 py-3">
             <div class="card ">
               <div class="card-body">
                 <img src="img/person4.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
@@ -351,19 +351,74 @@
               </div>
             </div>
           </div>
-
-
-
         </div>
       </div>
-
-
-
-
-
-
     </div>
   </section>
+
+  <!-- Contact -->
+  <div id="contact" class="bg-light py-5">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9 ">
+          <h3>Get in touch</h3>
+          <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda adipisci reiciendis, et possimus animi distinctio.</p>
+          <form>
+            <div class="input-group input-group-lg mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="fas fa-user"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" placeholder="Name">
+            </div>
+
+
+            <div class="input-group input-group-lg mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="fas fa-envelope-open"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" placeholder="Email">
+            </div>
+
+            <div class="input-group input-group-lg mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="fas fa-pencil-alt"></i>
+                </span>
+              </div>
+              <textarea class="form-control" placeholder="Message" rows="5"></textarea>
+            </div>
+            <input type="submit" value="Submit" class="btn btn-primary btn-block btn-large">
+          </form>
+        </div>
+        <!-- co-lg-9  end -->
+
+        <div class="col-lg-3 align-self-center">
+          <img src="img/logo2.png" alt="" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER  -->
+  <footer id="main-footer" class="py-3 bg-dark text-white">
+
+    <div class="container">
+      <div class="row text-center">
+        <div class="col ml-auto">
+          <p class="lead">
+            pickabook.com - Copyright &copy;
+            <span id="year"></span>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </footer>
 
 
 
@@ -382,6 +437,28 @@
   <script>
     // get current year for copyright
     $('#year').text(new Date().getFullYear());
+
+    // init scrollspy
+    $('body').scrollspy({
+      target: '#main-nav'
+    });
+    // Add smooth scrolling
+    $('#main-nav a').on('click', function (e) {
+      // Check for a hash value
+      if (this.hash !== '') {
+        // Prevent default behavior
+        e.preventDefault();
+        // Store hash
+        const hash = this.hash;
+        // Animate smooth scroll
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 900, function () {
+          // Add hash to URL after scroll
+          window.location.hash = hash;
+        });
+      }
+    });
 
   </script>
 </body>

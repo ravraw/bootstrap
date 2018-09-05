@@ -1,4 +1,47 @@
-nav {
-  border-bottom: 1px solid #555; }
+body {
+  margin-top: 150px;
+  font-size: 62.5%; }
+
+.navbar {
+  box-shadow: 1px 2px 3px #e74c3c;
+  opacity: 0.9;
+  background: #fff; }
+  .navbar .nav-item {
+    font-size: 2em;
+    padding-right: 1em; }
+
+#showcase {
+  position: relative;
+  min-height: 80vh;
+  border: 1px solid red; }
+  #showcase .primary-overlay {
+    background: #e74d3ccc;
+    height: 60vh; }
+  #showcase img {
+    height: 75vh; }
+
+.info-header {
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333; }
+
+#users .fab {
+  font-size: 2em; }
+#users img {
+  margin-top: -75px; }
+#users .card:hover {
+  background: #e74c3c;
+  color: #fff; }
+  #users .card:hover .fab {
+    color: #fff; }
+
+@media (max-width: 991.98px) {
+  #showcase {
+    height: 50vh;
+    overflow: hidden; }
+    #showcase h1 {
+      font-size: 4em; }
+    #showcase img {
+      width: auto;
+      margin: 0 auto; } }
 
 /*# sourceMappingURL=style.css.map */

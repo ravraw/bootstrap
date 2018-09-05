@@ -1,0 +1,25 @@
+body {
+  font-size: 62.5%; }
+
+.navbar .nav-item {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  margin: 0 1em; }
+.navbar .active {
+  border-bottom: 1px solid #fff; }
+
+.carousel-item {
+  height: 40em;
+  box-shadow: inset 0 0 100vw #e74d3ccc; }
+
+.carousel-image-1 {
+  background: url(../img/image1.jpg);
+  background-size: cover; }
+
+.carousel-image-2 {
+  background: url(../img/image2.jpg);
+  background-size: cover; }
+
+.carousel-image-3 {
+  background: url(../img/image3.jpg);
+  background-size: cover; }

@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
     crossorigin="anonymous">
   <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Bootstrap boiler</title>
 </head>
@@ -183,12 +184,58 @@
     </div>
   </div>
 
+
+
+  <!-- PHOTO GALLARY -->
+  <section id="gallery" class="py-5">
+    <div class="container">
+      <h1 class="text-center">Photo Gallery</h1>
+      <p class="text-center">Check out our photos</p>
+      <div class="row mb-4">
+        <div class="col-md-4">
+          <a href="./img/gallery1.jpg" data-toggle="lightbox" data-gallery="img-gallery" data-height='560' data-width='560'>
+            <img src="./img/gallery1.jpg" alt="" class="img-fluid">
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="./img/gallery2.jpg" data-toggle="lightbox" data-gallery="img-gallery" data-height='560' data-width='560'>
+            <img src="./img/gallery2.jpg" alt="" class="img-fluid">
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="./img/gallery3.jpg" data-toggle="lightbox" data-gallery="img-gallery" data-height='560' data-width='560'>
+            <img src="./img/gallery3.jpg" alt="" class="img-fluid">
+          </a>
+        </div>
+      </div>
+      <div class="row mb-4">
+        <div class="col-md-4">
+          <a href="./img/gallery4.jpg" data-toggle="lightbox" data-gallery="img-gallery" data-height='560' data-width='560'>
+            <img src="./img/gallery4.jpg" alt="" class="img-fluid">
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="./img/gallery5.jpg" data-toggle="lightbox" data-gallery="img-gallery" data-height='560' data-width='560'>
+            <img src="./img/gallery5.jpg" alt="" class="img-fluid">
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="./img/gallery6.jpg" data-toggle="lightbox" data-gallery="img-gallery" data-height='560' data-width='560'>
+            <img src="./img/gallery6.jpg" alt="" class="img-fluid">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <img src="https://unsplash.com/photos/lam1HEFdBm8" alt="">
+
   <script src=" https://code.jquery.com/jquery-3.3.1.min.js " integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin=" anonymous "></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q "
     crossorigin="anonymous "></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl "
     crossorigin="anonymous "></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
 
   <script>
     // get current year for copyright
@@ -214,6 +261,12 @@
           $(theModal + ' iframe').attr('src', videoSRC);
         });
       });
+    });
+
+    // light-box setup
+    $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+      event.preventDefault();
+      $(this).ekkoLightbox();
     });
 
 

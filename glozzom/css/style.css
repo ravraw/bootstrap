@@ -23,3 +23,7 @@ body {
 .carousel-image-3 {
   background: url(../img/image3.jpg);
   background-size: cover; }
+
+#home-icons {
+  font-size: 2em;
+  text-align: center; }

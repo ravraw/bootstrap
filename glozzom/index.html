@@ -123,7 +123,7 @@
   </section>
 
   <!-- HOME HEADING SECTION -->
-  <section id="home-heading" class="py-5">
+  <section id="home-heading" class="py-5 ">
     <div class="dark-overlay">
       <div class="row">
         <div class="col">
@@ -153,6 +153,36 @@
     </div>
   </section>
 
+  <!-- VEDIO PLAY -->
+  <section id="video-play">
+    <div class="dark-overlay">
+      <div class="row">
+        <div class="col">
+          <div class="container py-5">
+            <a href="#" class="video mb-3" data-video="https://www.youtube.com/embed/xKOPqWWmxEQ" data-toggle="modal" data-target="#videoModal">
+              <i class="fas fa-play fa-4x"></i>
+            </a>
+            <h1>See what we do</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO MODAL -->
+  <div class="modal fade" id="videoModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button class="close" data-dismiss="modal">
+            <span>&times;</span>
+          </button>
+          <iframe src="" frameborder="0" height="350" width="100%" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src=" https://code.jquery.com/jquery-3.3.1.min.js " integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin=" anonymous "></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q "
@@ -169,6 +199,24 @@
       interval: 4000,
       pause: 'hover'
     })
+    // Video Play
+    $(function () {
+      // Auto play modal video
+      $(".video").click(function () {
+        var theModal = $(this).data("target"),
+          videoSRC = $(this).attr("data-video"),
+          videoSRCauto = videoSRC + "?modestbranding=1&rel=0&controls=0&showinfo=0&html5=1&autoplay=1";
+        $(theModal + ' iframe').attr('src', videoSRCauto);
+        $(theModal + ' button.close').click(function () {
+          $(theModal + ' iframe').attr('src', videoSRC);
+        });
+        $(theModal).click(function () {
+          $(theModal + ' iframe').attr('src', videoSRC);
+        });
+      });
+    });
+
+
 
   </script>
 </body>

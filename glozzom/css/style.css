@@ -98,3 +98,6 @@ p {
 #faq .card-header {
   background: #333;
   font-size: 1.5em; }
+
+#blog .blockquote-footer {
+  font-size: 1.5em; }

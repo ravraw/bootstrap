@@ -233,12 +233,13 @@
     $('#year').text(new Date().getFullYear());
 
     // slick slider
-
     $('.slider').slick({
       infinite: true,
       slideToShow: 1,
-      slideToScroll: 1
-    })
+      slideToScroll: 1,
+      autoplay: true,
+      autoplayspeed: 3000
+    });
   </script>
 </body>
 

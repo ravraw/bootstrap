@@ -39,7 +39,7 @@ body {
 /* background-position is good to keep focus on specific part of an image */
 /* https://bennettfeely.com/clippy/ */
 
-header {
+.header {
   backface-visibility: hidden;
   position: relative;
   height: 95vh;
@@ -55,57 +55,43 @@ header {
   background-position: center;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
-}
 
-header img {
-  width: 100%;
-}
+  &__logo-box {
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+  }
+  &__logo {
+    height: 4rem;
+  }
 
-/*  Header logo */
-.logo-box {
-  position: absolute;
-  top: 3rem;
-  left: 3rem;
-}
-.logo-box img {
-  height: 5rem;
-  min-height: 25px;
-}
+  &__text-box {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
 
-/* header main text */
-
-.text-box {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-.main-heading {
-  color: $color-white;
-  text-transform: uppercase;
-  backface-visibility: hidden;
-}
-
-.main-heading_primary {
-  display: block;
-  font-size: 8rem;
-  font-weight: 300;
-  letter-spacing: 4rem;
-  animation: moveInLeft 1.5s ease;
-  /* animation-name: moveInLeft;
-  animation-duration: 2s;
-  animation-timing-function: ease-in; */
-}
-.main-heading_secondary {
-  display: block;
-  font-size: 4rem;
-  font-weight: 300;
-  letter-spacing: 1.3rem;
-  animation: moveInRight 1.5s ease;
-  /* animation-name: moveInRight;
-  animation-duration: 2s;
-  animation-timing-function: ease-in; */
+  &__main-heading {
+    color: $color-white;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    &--pri {
+      display: block;
+      font-size: 8rem;
+      font-weight: 300;
+      letter-spacing: 4rem;
+      animation: moveInLeft 1.5s ease;
+    }
+    &--sub {
+      display: block;
+      font-size: 4rem;
+      font-weight: 300;
+      letter-spacing: 1.3rem;
+      animation: moveInRight 1.5s ease;
+    }
+  }
 }
 
 /* header animation */
@@ -125,6 +111,64 @@ header img {
     transform: translateX(0);
   }
 }
+
+// BUtton styles
+
+.btn {
+  &:link,
+  &:visited {
+    position: relative;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: 400;
+    padding: 0.4em 1.5em;
+    margin-top: 1em;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all 0.2s;
+  }
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 5px 15px rgba($color-black, 0.5);
+    &::after {
+      transform: scaleX(1.5) scaleY(1.7);
+      opacity: 0;
+    }
+  }
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 5px rgba($color-black, 0.2);
+  }
+
+  &--white {
+    background-color: $color-white;
+    color: $color-gray;
+    &::after {
+      background-color: $color-white;
+    }
+  }
+  &--animated {
+    animation: moveInBottom 1.5s ease 1.3s;
+    animation-fill-mode: backwards;
+  }
+}
+
+// button end
+
+// Animation
 
 @keyframes moveInRight {
   0% {
@@ -153,62 +197,4 @@ header img {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-/*  main-button */
-
-.btn:link,
-.btn:visited {
-  position: relative;
-  text-transform: capitalize;
-  text-decoration: none;
-  font-size: 2em;
-  font-weight: 400;
-  padding: 0.4em 1.5em;
-  margin-top: 1em;
-  display: inline-block;
-  border-radius: 10rem;
-  transition: all 0.2s;
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0px 5px 15px rgba($color-black, 0.5);
-}
-
-.btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 2px 5px rgba($color-black, 0.2);
-}
-
-.btn-white {
-  background-color: #fff;
-  color: $color-gray;
-}
-
-.btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 100px;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  z-index: -1;
-  transition: all 0.4s;
-}
-
-.btn-white::after {
-  background-color: $color-black;
-}
-
-.btn:hover::after {
-  transform: scaleX(1.5) scaleY(1.7);
-  opacity: 0;
-}
-
-.btn-animated {
-  animation: moveInBottom 1.5s ease 1.3s;
-  animation-fill-mode: backwards;
 }

@@ -1,7 +1,7 @@
 .header {
   backface-visibility: hidden;
   position: relative;
-  height: 95vw;
+  height: 95vh;
   background-color: red;
   background-image: linear-gradient(
       to bottom right,
@@ -12,8 +12,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vw, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 85vw, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
 
   &__logo-box {
     position: absolute;

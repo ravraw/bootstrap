@@ -54,10 +54,12 @@ body {
 .heading-tertiary {
   font-size: 2rem;
   font-weight: 400;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  color: #777; }
 
 .paragraph {
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  color: #777; }
   .paragraph:not(:last-child) {
     margin-bottom: 2rem; }
 
@@ -147,14 +149,14 @@ body {
 .header {
   backface-visibility: hidden;
   position: relative;
-  height: 95vw;
+  height: 95vh;
   background-color: red;
   background-image: linear-gradient(to bottom right, rgba(126, 213, 111, 0.508), rgba(40, 180, 133, 0.508)), url("../img/hero.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vw, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 85vw, 0 100%); }
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); }
   .header__logo-box {
     position: absolute;
     top: 3rem;
@@ -261,7 +263,34 @@ body {
   .composition:hover .composition__photo:not(:hover) {
     transform: scale(0.9); }
 
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  margin: 0 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+  transition: all 0.2s; }
+  .feature-box__icon {
+    font-size: 4rem;
+    background-image: linear-gradient(to right, #7ed56f, #28b485);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; }
+  .feature-box:hover {
+    transform: translateY(-10px) scale(1.05); }
+
 .section-about {
   background: #f7f7f7;
-  padding: 15rem 0;
+  padding: 20rem 5rem;
   margin-top: -10vh; }
+
+.section-features {
+  margin-top: -10vh;
+  padding: 15rem 5rem;
+  background-image: linear-gradient(to bottom right, rgba(126, 213, 111, 0.508), rgba(40, 180, 133, 0.508)), url("../img/nat-4.jpg");
+  background-size: cover;
+  transform: skewY(-7deg); }
+  .section-features > * {
+    transform: skewY(7deg); }

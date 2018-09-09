@@ -1,0 +1,38 @@
+.row {
+  @include clearfix;
+}
+.col {
+  background: $color-gray-light-1;
+  color: $color-gray;
+
+  &-1-of-2 {
+    width: calc((100% - #{$gutter}) / 2);
+    float: left;
+    @include gutter;
+  }
+  &-1-of-3 {
+    width: calc((100% - #{$gutter * 2}) / 3);
+    float: left;
+    @include gutter;
+  }
+  &-2-of-3 {
+    width: calc((100% - #{$gutter}) / 3 * 2);
+    float: right;
+  }
+  &-1-of-4 {
+    width: calc((100% - #{$gutter * 3}) / 4);
+    float: left;
+    @include gutter;
+  }
+  &-2-of-4 {
+    width: calc((100% - #{$gutter}) / 2);
+    float: left;
+    @include gutter;
+  }
+
+  &-3-of-4 {
+    width: calc(((100% - #{$gutter}) / 4) * 3);
+    float: right;
+    @include gutter;
+  }
+}
